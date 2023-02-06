@@ -1,14 +1,13 @@
 import css from './Profile.module.css';
 import PropTypes from 'prop-types';
 
-export const Profile = ({ user }) => {
-  const {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, likes, views },
-  } = user;
+export const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, likes, views },
+} ) => {
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -37,7 +36,6 @@ export const Profile = ({ user }) => {
 };
 
 Profile.propTypes = {
-  user: PropTypes.exact({
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
@@ -47,5 +45,4 @@ Profile.propTypes = {
       views: PropTypes.number,
       likes: PropTypes.number,
     }),
-  }),
-};
+  };
