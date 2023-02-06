@@ -37,20 +37,15 @@ export const Profile = ({ user }) => {
 };
 
 Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  stats: PropTypes.exact({
-    followers: PropTypes.number,
-    views: PropTypes.number,
-    likes: PropTypes.number,
+  user: PropTypes.exact({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.exact({
+      followers: PropTypes.number,
+      views: PropTypes.number,
+      likes: PropTypes.number,
+    }),
   }),
-};
-
-Profile.defaultProps = {
-  username: 'Anonim',
-  tag: 'unknown',
-  location: 'somewhere',
-  avatar: 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
 };
